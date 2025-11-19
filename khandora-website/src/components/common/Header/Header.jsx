@@ -17,7 +17,7 @@ const Header = () => {
           <Link className="navbar-brand" to="/">
             <img
               src={logo}
-              alt="Khandora Tech"
+              alt="Khandora Technologies"
               className="header-logo"
               onError={(e) => {
                 e.target.src =
