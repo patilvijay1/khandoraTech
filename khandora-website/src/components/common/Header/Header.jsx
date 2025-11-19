@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 import "./Header.css";
 import { useApp } from "../../../context/AppContext";
-import logo from "../../../assets/logo.png";
+import logo from "../../../assets/Khandora-Tech-Logo.png";
 
 const Header = () => {
   const { mobileMenuOpen, toggleMobileMenu } = useApp();
