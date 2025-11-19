@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 import "./Header.css";
 import { useApp } from "../../../context/AppContext";
+import logo from "../../../assets/logo.png";
 
 const Header = () => {
   const { mobileMenuOpen, toggleMobileMenu } = useApp();
@@ -15,8 +16,8 @@ const Header = () => {
         <div className="container">
           <Link className="navbar-brand" to="/">
             <img
-              src="/assets/images/logo.png"
-              alt="Khandora"
+              src={logo}
+              alt="Khandora Tech"
               className="header-logo"
               onError={(e) => {
                 e.target.src =
