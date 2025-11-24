@@ -5,7 +5,9 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <footer className="footer bg-dark text-light pt-5 pb-4">
-      <div className="container">
+      <div className="container-fluid">
+        {" "}
+        {/* Changed to container-fluid */}
         <div className="row">
           <div className="col-lg-4 col-md-6 mb-4">
             <h5 className="footer-brand mb-3">Khandora</h5>
@@ -109,9 +111,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
         <hr className="border-light my-4" />
-
         <div className="row align-items-center">
           <div className="col-md-6">
             <p className="footer-copyright mb-0">

@@ -1,0 +1,105 @@
+.navbar-nav {
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-size: 1.1rem !important;
+  font-weight: 500;
+  color: #333 !important;
+  position: relative;
+  padding: 0.5rem 0 !important;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: slideInFromRight 0.5s ease forwards;
+}
+
+.nav-link.text-white {
+  color: white !important;
+}
+
+.nav-link.text-white:hover {
+  color: #fff !important;
+  opacity: 0.8;
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.nav-link:hover {
+  color: #0072c6 !important;
+  transform: translateY(-2px);
+}
+
+.nav-link.text-white:hover {
+  color: #fff !important;
+  transform: translateY(-2px);
+}
+
+.nav-link.active {
+  color: #0072c6 !important;
+  font-weight: 600;
+}
+
+.nav-link.text-white.active {
+  color: #fff !important;
+  font-weight: 600;
+}
+
+.nav-link-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #0072c6;
+  transition: width 0.3s ease;
+}
+
+.nav-link.text-white .nav-link-underline {
+  background: #fff;
+}
+
+.nav-link:hover .nav-link-underline,
+.nav-link.active .nav-link-underline {
+  width: 100%;
+}
+
+/* Mobile styles */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .nav-link {
+    font-size: 1.2rem !important;
+    padding: 0.75rem 1rem !important;
+    margin: 0;
+    animation: fadeInUp 0.5s ease forwards;
+    color: #333 !important;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .nav-link-underline {
+    display: none;
+  }
+}

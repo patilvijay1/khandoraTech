@@ -1,0 +1,255 @@
+.carousel-section {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  margin-top: 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  left: 0;
+  right: 0;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+}
+
+.carousel-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2rem;
+}
+
+.carousel-content-inner {
+  text-align: left;
+  max-width: 600px;
+}
+
+.carousel-title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUpFadeIn 0.8s ease 0.3s forwards;
+  background: linear-gradient(135deg, #007dff 0%, #fe6626 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.carousel-description {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUpFadeIn 0.8s ease 0.5s forwards;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.carousel-btn {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUpFadeIn 0.8s ease 0.7s forwards;
+  background: linear-gradient(135deg, #007dff 0%, #fe6626 100%);
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 125, 255, 0.3);
+}
+
+@keyframes slideUpFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.carousel-control:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-control.prev {
+  left: 2rem;
+}
+
+.carousel-control.next {
+  right: 2rem;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  /* transform: translateX(-50%); */
+  /* width: 100%;  */
+  display: flex;
+  justify-content: center; /* NOW WORKS */
+  align-items: center;
+  gap: 1rem;
+  z-index: 10;
+}
+
+.indicator {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: linear-gradient(#007dff 100%);
+  border-color: transparent;
+  transform: scale(1.2);
+}
+
+.indicator:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel-section {
+    height: 70vh;
+    min-height: 500px;
+  }
+
+  .carousel-title {
+    font-size: 2.8rem;
+  }
+
+  .carousel-description {
+    font-size: 1.3rem;
+  }
+
+  .carousel-control {
+    width: 50px;
+    height: 50px;
+  }
+
+  .carousel-control.prev {
+    left: 1rem;
+  }
+
+  .carousel-control.next {
+    right: 1rem;
+  }
+
+  .carousel-content {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-section {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .carousel-title {
+    font-size: 2.2rem;
+  }
+
+  .carousel-description {
+    font-size: 1.1rem;
+  }
+
+  .carousel-content {
+    padding: 0 1rem;
+  }
+
+  .carousel-control {
+    width: 45px;
+    height: 45px;
+  }
+
+  .carousel-control.prev {
+    left: 0.5rem;
+  }
+
+  .carousel-control.next {
+    right: 0.5rem;
+  }
+}
