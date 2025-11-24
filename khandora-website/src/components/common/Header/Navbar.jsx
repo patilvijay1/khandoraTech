@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useApp } from "../../../context/AppContext";
-// import { useApp } from "../../../context/AppContext";
+import "./Navbar.css";
 
-const Navbar = ({ currentPath }) => {
+const Navbar = ({ currentPath, isTransparent }) => {
   const { toggleMobileMenu } = useApp();
 
   const navItems = [
@@ -20,14 +20,18 @@ const Navbar = ({ currentPath }) => {
 
   return (
     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-      {navItems.map((item) => (
+      {navItems.map((item, index) => (
         <li key={item.path} className="nav-item">
           <Link
-            className={`nav-link ${currentPath === item.path ? "active" : ""}`}
+            className={`nav-link nav-link-animated ${
+              currentPath === item.path ? "active" : ""
+            } ${isTransparent ? "text-white" : ""}`}
             to={item.path}
             onClick={handleNavClick}
+            style={{ animationDelay: `${index * 0.1}s` }}
           >
             {item.label}
+            <span className="nav-link-underline"></span>
           </Link>
         </li>
       ))}

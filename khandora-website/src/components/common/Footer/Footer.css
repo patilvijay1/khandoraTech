@@ -1,17 +1,49 @@
 .footer {
   margin-top: auto;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #007dff 0%, #fe6626 100%);
 }
 
 .footer-brand {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
-  color: #fff;
+  background: linear-gradient(135deg, #007dff 0%, #fe6626 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .footer-title {
   color: #fff;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(135deg, #007dff 0%, #fe6626 100%);
+  border-radius: 2px;
 }
 
 .footer-text {
@@ -26,16 +58,19 @@
 .footer-link {
   color: #b0b0b0;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-left: 0;
 }
 
 .footer-link:hover {
-  color: #0072c6;
+  color: #007dff;
+  padding-left: 8px;
 }
 
 .social-links {
   display: flex;
-  gap: 15px;
+  gap: 12px;
   margin-top: 20px;
 }
 
@@ -43,28 +78,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.1);
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #007dff 0%, #fe6626 100%);
   border-radius: 50%;
   color: #fff;
   text-decoration: none;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 125, 255, 0.3);
 }
 
 .social-link:hover {
-  background: #0072c6;
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 125, 255, 0.4);
 }
 
 .contact-info i {
   width: 20px;
-  color: #0072c6;
+  color: #007dff;
 }
 
 .footer-copyright {
   color: #b0b0b0;
   font-size: 0.9rem;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -74,5 +115,15 @@
 
   .social-links {
     justify-content: center;
+  }
+
+  .footer-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
+    margin-top: 1rem;
   }
 }

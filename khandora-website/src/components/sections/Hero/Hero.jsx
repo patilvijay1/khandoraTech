@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Hero.css";
+import khandoraImg from "../../../assets/Khandora-Tech-Logo.png";
 
 const Hero = () => {
   return (
@@ -53,7 +54,7 @@ const Hero = () => {
           <div className="col-lg-6">
             <div className="hero-image">
               <img
-                src="/assets/images/hero-bg.jpg"
+                src={khandoraImg}
                 alt="Khandora Hero"
                 className="img-fluid rounded-3 shadow"
                 onError={(e) => {

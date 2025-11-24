@@ -6,17 +6,33 @@ import Testimonials from "../../components/sections/Testimonials/Testimonials";
 import About from "../../components/sections/About/About";
 import Contact from "../../components/sections/Contact/Contact";
 import "./Home.css";
+import HomeCarousel from "../HomeCarousel/HomeCarousel";
+import HomeWhoWeAre from "../HomeWhoWeAre/HomeWhoWeAre";
+import HomeWhyKhandora from "../HomeWhyKhandora/HomeWhyKhandora";
+import HomeGuidingPrinciples from "../HomeGuidingPrinciples/HomeGuidingPrinciples";
+import HomeElevatingBusinesses from "../HomeElevatingBusinesses/HomeElevatingBusinesses";
+import HomeEmpoweringGrowth from "../HomeEmpoweringGrowth/HomeEmpoweringGrowth";
+import HomeWeAreHiring from "../HomeWeAreHiring/HomeWeAreHiring";
 
 const Home = () => {
   return (
-    <div className="home-page">
-      <Hero />
-      <Services />
-      <Products />
-      <About />
-      <Testimonials />
-      <Contact />
-    </div>
+    <>
+      <HomeCarousel />
+      <div className="container-fluid px-0">
+        <HomeWhoWeAre />
+        <HomeGuidingPrinciples />
+        <HomeElevatingBusinesses />
+        <HomeEmpoweringGrowth />
+        <HomeWhyKhandora />
+        <HomeWeAreHiring />
+        <Hero />
+        <Services />
+        <Products />
+        <About />
+        <Testimonials />
+        <Contact />
+      </div>
+    </>
   );
 };
 
