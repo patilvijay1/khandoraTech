@@ -13,6 +13,7 @@ import HomeGuidingPrinciples from "../HomeGuidingPrinciples/HomeGuidingPrinciple
 import HomeElevatingBusinesses from "../HomeElevatingBusinesses/HomeElevatingBusinesses";
 import HomeEmpoweringGrowth from "../HomeEmpoweringGrowth/HomeEmpoweringGrowth";
 import HomeWeAreHiring from "../HomeWeAreHiring/HomeWeAreHiring";
+import HomeServices from "../HomeServices/HomeServices";
 
 const Home = () => {
   return (
@@ -22,13 +23,14 @@ const Home = () => {
         <HomeWhoWeAre />
         <HomeGuidingPrinciples />
         <HomeElevatingBusinesses />
-        <HomeEmpoweringGrowth />
         <HomeWhyKhandora />
+        <HomeEmpoweringGrowth />
         <HomeWeAreHiring />
-        <Hero />
-        <Services />
-        <Products />
-        <About />
+        {/* <Hero /> */}
+        <HomeServices />
+        {/* <Services /> */}
+        {/* <Products /> */}
+        {/* <About /> */}
         <Testimonials />
         <Contact />
       </div>
