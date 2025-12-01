@@ -5,37 +5,37 @@ import "./HomeWhyKhandora.css";
 const HomeWhyKhandora = () => {
   const principles = [
     {
-      icon: "💎",
+      icon: "fas fa-code",
       label: "We Listen and Understand",
       description:
         "Our approach begins with empathetic understanding of your goals and challenges.",
     },
     {
-      icon: "🚀",
+      icon: "fas fa-mobile-alt",
       label: "Customized Solutions",
       description:
         "We craft innovative, scalable software solutions aligned with your strategic objectives.",
     },
     {
-      icon: "🤝",
+      icon: "fas fa-laptop-code",
       label: "Collaborative Partnership",
       description:
         "We become an integral part of your team, fostering synergy and open communication.",
     },
     {
-      icon: "🔮",
+      icon: "fas fa-cloud",
       label: "Innovation & Future Driven Mindset",
       description:
         "We leverage cutting-edge technologies to deliver transformative, impactful, and future-proof change.",
     },
     {
-      icon: "🔄",
+      icon: "fas fa-palette",
       label: "Agile and Iterative Approach",
       description:
         "Our software methodology embraces flexibility and continuous improvement.",
     },
     {
-      icon: "📚",
+      icon: "fas fa-handshake",
       label: "Knowledge Transfer and Empowerment",
       description:
         "We build your internal capabilities through training and knowledge sharing.",
@@ -64,7 +64,10 @@ const HomeWhyKhandora = () => {
           <div className="principle-card" key={index}>
             <div className="card-content">
               <div className="card-front">
-                <div className="principle-icon">{principle.icon}</div>
+                <div className="principle-icon">
+                  {" "}
+                  <i className={principle.icon}></i>
+                </div>
                 <span className="principle-label">{principle.label}</span>
               </div>
               <div className="card-back">

@@ -1,0 +1,93 @@
+.home-services-section {
+  background: #fff;
+}
+
+.home-service-card {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #e5e9ec87 !important;
+}
+
+.home-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.home-service-icon {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-size: 3rem;
+  color: #007bff !important;
+  background-color: #fbfbfbd9;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15) !important;
+}
+
+.home-service-card .card-body {
+  padding: 10px 30px 25px 10rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.home-service-content {
+  width: 100%; /* Ensure content takes full available space */
+}
+
+.home-service-title {
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #02121f;
+}
+
+.home-service-description {
+  flex-grow: 1;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #555;
+  font-size: 14px;
+}
+
+.home-service-button-container {
+  margin-top: auto;
+  text-align: center;
+  display: flex;
+  justify-content: end;
+}
+
+.home-service-btn {
+  background-color: #eff3f7 !important;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: 0.5px dotted gray !important;
+}
+
+.home-service-btn:hover {
+  background: #007bff !important;
+  color: white !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home-service-card .card-body {
+    padding: 25px 20px 20px 80px; /* Slightly reduced padding for mobile */
+  }
+
+  .home-service-icon {
+    top: 20px;
+    left: 20px;
+  }
+}
