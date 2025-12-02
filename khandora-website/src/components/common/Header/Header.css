@@ -27,6 +27,27 @@
   z-index: 1001;
 }
 
+.header {
+  z-index: 1050; /* Increased z-index */
+  transition: all 0.3s ease;
+}
+
+/* Ensure dropdown appears above everything */
+.navbar {
+  position: relative;
+  z-index: 1051;
+}
+
+/* Prevent content jump when dropdown appears */
+body {
+  overflow-x: hidden;
+}
+
+/* Smooth page transitions */
+* {
+  transition: background-color 0.3s ease;
+}
+
 @media (max-width: 991.98px) {
   .mobile-toggle {
     display: block;
